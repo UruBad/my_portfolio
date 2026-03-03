@@ -3,23 +3,50 @@
     <div class="header__inner">
       <div class="header__brand">
         <span class="header__logo">UB</span>
-        <span class="header__title">Portfolio</span>
+        <span class="header__title">
+          {{ t('brand.name') }}
+        </span>
       </div>
-      <nav class="header__nav">
-        <a href="#hero" class="header__link">Hero</a>
-        <a href="#about" class="header__link">About</a>
-        <a href="#experience" class="header__link">Experience</a>
-        <a href="#skills" class="header__link">Skills</a>
-        <a href="#projects" class="header__link">Projects</a>
-        <a href="#education" class="header__link">Education</a>
-        <a href="#services" class="header__link">Services</a>
-        <a href="#contacts" class="header__link">Contacts</a>
+      <nav class="header__nav" aria-label="Main navigation">
+        <a href="#hero" class="header__link">
+          {{ t('nav.hero') }}
+        </a>
+        <a href="#about" class="header__link">
+          {{ t('nav.about') }}
+        </a>
+        <a href="#experience" class="header__link">
+          {{ t('nav.experience') }}
+        </a>
+        <a href="#skills" class="header__link">
+          {{ t('nav.skills') }}
+        </a>
+        <a href="#projects" class="header__link">
+          {{ t('nav.projects') }}
+        </a>
+        <a href="#education" class="header__link">
+          {{ t('nav.education') }}
+        </a>
+        <a href="#services" class="header__link">
+          {{ t('nav.services') }}
+        </a>
+        <a href="#contacts" class="header__link">
+          {{ t('nav.contacts') }}
+        </a>
       </nav>
+      <div class="header__controls">
+        <ThemeToggle />
+        <LanguageSwitcher />
+      </div>
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
+import LanguageSwitcher from '@/features/language-switcher/ui/LanguageSwitcher.vue';
+import ThemeToggle from '@/features/theme-toggle/ui/ThemeToggle.vue';
+import { useI18n } from '@/shared/lib/i18n/useI18n';
+
+const { t } = useI18n();
 </script>
 
 <style scoped lang="scss">
@@ -71,6 +98,12 @@
   font-size: 0.85rem;
 }
 
+.header__controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .header__link {
   color: inherit;
   text-decoration: none;
@@ -88,11 +121,16 @@
 @media (max-width: 768px) {
   .header__inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 8px;
   }
 
   .header__nav {
     justify-content: flex-start;
+  }
+
+  .header__controls {
+    justify-content: flex-end;
   }
 }
 </style>

@@ -1,12 +1,15 @@
 <template>
-  <Section id="about" title="About (placeholder)">
+  <Section :id="'about'" :title="t('section.about.title')">
     <p>
-      About section placeholder. Content will be filled from resume data in task 2.1.
+      {{ t('placeholder.about') }}
     </p>
   </Section>
 </template>
 
 <script setup lang="ts">
 import Section from '@/shared/ui/Section/Section.vue';
+import { useI18n } from '@/shared/lib/i18n/useI18n';
+
+const { t } = useI18n();
 </script>
 
