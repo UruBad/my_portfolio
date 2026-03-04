@@ -23,9 +23,10 @@ export const skillCategories: SkillCategory[] = [
     },
     skills: [
       { name: 'Vue.js / Vue 3', level: 'core' },
-      { name: 'React', level: 'confident' },
-      { name: 'Next.js', level: 'confident' },
-      { name: 'Redux', level: 'confident' },
+      { name: 'Vuex', level: 'confident' },
+      { name: 'Pinia', level: 'confident' },
+      { name: 'Vue Router', level: 'confident' },
+      { name: 'Nuxt.js', level: 'familiar' },
       { name: 'NestJS', level: 'familiar' },
     ],
   },

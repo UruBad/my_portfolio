@@ -12,9 +12,6 @@
           {{ profileLocation }}
         </li>
         <li>
-          {{ salaryText }}
-        </li>
-        <li>
           {{ availabilityText }}
         </li>
       </ul>
@@ -34,12 +31,6 @@ const { t, locale } = useI18n();
 const profileSummary = computed(() => profile.summary[locale.value]);
 const profileRole = computed(() => profile.role[locale.value]);
 const profileLocation = computed(() => profile.location[locale.value]);
-
-const salaryText = computed(() =>
-  locale.value === 'ru'
-    ? `Ориентир по доходу: от ${profile.salaryExpectationUSD.toLocaleString('ru-RU')} $ на руки.`
-    : `Desired compensation: from $${profile.salaryExpectationUSD.toLocaleString('en-US')} net.`,
-);
 
 const availabilityText = computed(() =>
   locale.value === 'ru'

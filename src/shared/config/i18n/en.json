@@ -1,0 +1,38 @@
+{
+  "brand.name": "Portfolio",
+
+  "nav.hero": "Hero",
+  "nav.about": "About",
+  "nav.experience": "Experience",
+  "nav.skills": "Skills",
+  "nav.projects": "Projects",
+  "nav.education": "Education",
+  "nav.services": "Services",
+  "nav.contacts": "Contacts",
+
+  "section.hero.title": "Hero",
+  "section.about.title": "About",
+  "section.experience.title": "Experience",
+  "section.skills.title": "Skills",
+  "section.projects.title": "Projects",
+  "section.education.title": "Education & Courses",
+  "section.services.title": "Services",
+  "section.contacts.title": "Contacts",
+
+  "common.language.ru": "RU",
+  "common.language.en": "EN",
+
+  "hero.cta.resume": "Download CV (PDF)",
+  "hero.cta.email": "Email",
+  "hero.cta.github": "GitHub",
+
+  "placeholder.hero": "Hero section with intro, CTAs and key information about you.",
+  "placeholder.about": "The “About” section based on your resume will be placed here.",
+  "placeholder.experience": "The experience timeline will appear here.",
+  "placeholder.skills": "Your skills and tech stack will be shown here.",
+  "placeholder.projects": "Project cards and GitHub links will be configured here.",
+  "placeholder.education": "Education and courses information will be placed here.",
+  "placeholder.services": "Service offerings and focus areas will be listed here.",
+  "placeholder.contacts": "Contacts and quick actions will be available here."
+}
+

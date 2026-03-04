@@ -3,7 +3,7 @@ export function useDownloadResume() {
     if (typeof window === 'undefined') return;
 
     const base = import.meta.env.BASE_URL ?? '/';
-    const url = new URL('resume.pdf', window.location.origin + base).toString();
+    const url = new URL('binary/resume.pdf', window.location.origin + base).toString();
 
     window.open(url, '_blank', 'noopener,noreferrer');
   };

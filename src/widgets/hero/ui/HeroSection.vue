@@ -6,7 +6,7 @@
           {{ profileLocation }}
         </p>
         <h1 class="hero__title">
-          {{ profile.fullName }}
+          {{ profileName }}
         </h1>
         <p class="hero__role">
           {{ profileRole }}
@@ -47,6 +47,7 @@ import { useI18n } from '@/shared/lib/i18n/useI18n';
 
 const { t, locale } = useI18n();
 
+const profileName = computed(() => profile.fullName[locale.value]);
 const profileLocation = computed(() => profile.location[locale.value]);
 const profileRole = computed(() => profile.role[locale.value]);
 const profileSummary = computed(() => profile.summary[locale.value]);

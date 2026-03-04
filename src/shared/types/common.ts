@@ -4,10 +4,9 @@ export interface LocalizedText {
 }
 
 export interface PersonProfile {
-  fullName: string;
+  fullName: LocalizedText;
   role: LocalizedText;
   location: LocalizedText;
-  salaryExpectationUSD: number;
   summary: LocalizedText;
 }
 

@@ -4,11 +4,11 @@ export const experience: ExperienceItem[] = [
   {
     company: 'EMCD Tech LTD',
     location: 'Санкт-Петербург',
-    position: 'Middle Frontend Developer',
+    position: 'Senior Frontend Developer',
     start: '2025-02',
     end: '2026-02',
     description: {
-      ru: 'Разработка фронтенда для майнинг‑и white‑label‑решений и систем мониторинга в финансовом секторе.',
+      ru: 'Разработка фронтенда для майнинг и white‑label‑решений и систем мониторинга в финансовом секторе.',
       en: 'Frontend development for mining, white‑label and monitoring products in the financial sector.',
     },
   },

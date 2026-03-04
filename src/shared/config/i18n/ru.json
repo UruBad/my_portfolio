@@ -1,0 +1,38 @@
+{
+  "brand.name": "Портфолио",
+
+  "nav.hero": "Главная",
+  "nav.about": "Обо мне",
+  "nav.experience": "Опыт",
+  "nav.skills": "Навыки",
+  "nav.projects": "Проекты",
+  "nav.education": "Образование",
+  "nav.services": "Услуги",
+  "nav.contacts": "Контакты",
+
+  "section.hero.title": "Главная",
+  "section.about.title": "Обо мне",
+  "section.experience.title": "Опыт",
+  "section.skills.title": "Навыки",
+  "section.projects.title": "Проекты",
+  "section.education.title": "Образование и курсы",
+  "section.services.title": "Услуги",
+  "section.contacts.title": "Контакты",
+
+  "common.language.ru": "RU",
+  "common.language.en": "EN",
+
+  "hero.cta.resume": "Скачать резюме (PDF)",
+  "hero.cta.email": "Написать",
+  "hero.cta.github": "GitHub",
+
+  "placeholder.hero": "Главный экран: краткое представление, CTA и ключевая информация о вас.",
+  "placeholder.about": "Здесь будет раздел «Обо мне» с текстом из резюме.",
+  "placeholder.experience": "Здесь появится таймлайн опыта работы.",
+  "placeholder.skills": "Здесь будет карта навыков и технологий.",
+  "placeholder.projects": "Здесь будут карточки проектов и ссылки на GitHub.",
+  "placeholder.education": "Здесь будет раздел об образовании и курсах.",
+  "placeholder.services": "Здесь будет список услуг и типов задач, с которыми вы работаете.",
+  "placeholder.contacts": "Здесь будут контакты и быстрые действия."
+}
+
