@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import { useDownloadResume } from '@/features/download-resume/lib/useDownloadResume';
-import { useI18n } from '@/shared/lib/i18n/useI18n';
+import { useI18n } from '@/shared/lib/i18n';
 
 const { download } = useDownloadResume();
 const { t } = useI18n();

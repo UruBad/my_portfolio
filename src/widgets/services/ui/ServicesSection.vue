@@ -20,9 +20,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import { services } from '@/entities/services/model/services';
-import Section from '@/shared/ui/Section/Section.vue';
-import { useI18n } from '@/shared/lib/i18n/useI18n';
+import { services } from '@/entities/services';
+import { Section } from '@/shared/ui/Section';
+import { useI18n } from '@/shared/lib/i18n';
 
 const { t, locale: currentLocale } = useI18n();
 

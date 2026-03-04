@@ -1,4 +1,4 @@
-import type { PersonProfile } from '@/shared/types/common';
+import type { PersonProfile } from '@/shared/types';
 
 export const profile: PersonProfile = {
   fullName: {

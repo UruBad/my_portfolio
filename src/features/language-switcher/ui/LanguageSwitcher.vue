@@ -17,7 +17,7 @@
 import { computed } from 'vue';
 
 import type { Locale } from '@/shared/config/i18n/locales';
-import { useI18n } from '@/shared/lib/i18n/useI18n';
+import { useI18n } from '@/shared/lib/i18n';
 
 const { locale: currentLocale, supportedLocales, setLocale, t } = useI18n();
 
@@ -40,7 +40,8 @@ function onChange(loc: Locale) {
   padding: 2px;
   border-radius: 999px;
   background-color: rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(148, 163, 184, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  color: #e5e7eb;
 }
 
 .language-switcher__button {
@@ -58,6 +59,16 @@ function onChange(loc: Locale) {
 .language-switcher__button--active {
   background: linear-gradient(135deg, #6366f1, #a855f7);
   opacity: 1;
+}
+
+[data-theme='light'] .language-switcher {
+  background-color: rgba(15, 23, 42, 0.06);
+  border-color: rgba(148, 163, 184, 0.8);
+  color: #020617;
+}
+
+[data-theme='light'] .language-switcher__button--active {
+  color: #f9fafb;
 }
 </style>
 

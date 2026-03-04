@@ -39,11 +39,11 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import DownloadResumeButton from '@/features/download-resume/ui/DownloadResumeButton.vue';
-import { profile } from '@/entities/person/model/profile';
-import { contacts } from '@/entities/contacts/model/contacts';
+import { DownloadResumeButton } from '@/features/download-resume';
+import { profile } from '@/entities/person';
+import { contacts } from '@/entities/contacts';
 import Section from '@/shared/ui/Section/Section.vue';
-import { useI18n } from '@/shared/lib/i18n/useI18n';
+import { useI18n } from '@/shared/lib/i18n';
 
 const { t, locale } = useI18n();
 

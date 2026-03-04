@@ -22,9 +22,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import { profile } from '@/entities/person/model/profile';
-import Section from '@/shared/ui/Section/Section.vue';
-import { useI18n } from '@/shared/lib/i18n/useI18n';
+import { profile } from '@/entities/person';
+import { Section } from '@/shared/ui/Section';
+import { useI18n } from '@/shared/lib/i18n';
 
 const { t, locale } = useI18n();
 

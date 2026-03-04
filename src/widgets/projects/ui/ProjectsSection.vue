@@ -9,9 +9,9 @@
 </template>
 
 <script setup lang="ts">
-import { projects } from '@/entities/projects/model/projects';
-import Section from '@/shared/ui/Section/Section.vue';
-import { useI18n } from '@/shared/lib/i18n/useI18n';
+import { projects } from '@/entities/projects';
+import { Section } from '@/shared/ui/Section';
+import { useI18n } from '@/shared/lib/i18n';
 
 const { t } = useI18n();
 </script>

@@ -45,9 +45,9 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 
-import LanguageSwitcher from '@/features/language-switcher/ui/LanguageSwitcher.vue';
-import ThemeToggle from '@/features/theme-toggle/ui/ThemeToggle.vue';
-import { useI18n } from '@/shared/lib/i18n/useI18n';
+import { LanguageSwitcher } from '@/features/language-switcher';
+import { ThemeToggle } from '@/features/theme-toggle';
+import { useI18n } from '@/shared/lib/i18n';
 
 const { t } = useI18n();
 
@@ -145,6 +145,7 @@ onBeforeUnmount(() => {
   justify-content: center;
   background: linear-gradient(135deg, #6366f1, #a855f7);
   font-size: 0.85rem;
+  color: #f9fafb;
 }
 
 .header__title {

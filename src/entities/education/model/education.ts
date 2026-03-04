@@ -1,4 +1,4 @@
-import type { CourseItem, EducationItem } from '@/shared/types/common';
+import type { CourseItem, EducationItem } from '@/shared/types';
 
 export const education: EducationItem[] = [
   {

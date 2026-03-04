@@ -1,4 +1,4 @@
-import type { ServiceItem } from '@/shared/types/common';
+import type { ServiceItem } from '@/shared/types';
 
 export const services: ServiceItem[] = [
   {

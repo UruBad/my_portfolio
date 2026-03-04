@@ -16,7 +16,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import { useInViewAnimation } from '@/shared/lib/viewport/useInViewAnimation';
+import { useInViewAnimation } from '@/shared/lib/viewport';
 
 interface Props {
   id: string;

@@ -24,10 +24,10 @@
 </template>
 
 <script setup lang="ts">
-import { skillCategories } from '@/entities/skills/model/skills';
-import type { SkillCategory } from '@/shared/types/common';
-import Section from '@/shared/ui/Section/Section.vue';
-import { useI18n } from '@/shared/lib/i18n/useI18n';
+import { skillCategories } from '@/entities/skills';
+import type { SkillCategory } from '@/shared/types';
+import { Section } from '@/shared/ui/Section';
+import { useI18n } from '@/shared/lib/i18n';
 
 const { t, locale } = useI18n();
 

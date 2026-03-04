@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import { useTheme } from '@/shared/lib/theme/useTheme';
+import { useTheme } from '@/shared/lib/theme';
 
 const { theme, toggleTheme } = useTheme();
 

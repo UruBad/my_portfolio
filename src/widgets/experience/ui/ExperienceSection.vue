@@ -28,10 +28,10 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 
-import { experience } from '@/entities/experience/model/experience';
-import type { ExperienceItem } from '@/shared/types/common';
-import Section from '@/shared/ui/Section/Section.vue';
-import { useI18n } from '@/shared/lib/i18n/useI18n';
+import { experience } from '@/entities/experience';
+import type { ExperienceItem } from '@/shared/types';
+import { Section } from '@/shared/ui/Section';
+import { useI18n } from '@/shared/lib/i18n';
 
 const { t, locale } = useI18n();
 

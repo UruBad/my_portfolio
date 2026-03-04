@@ -1,4 +1,4 @@
-import type { ExperienceItem } from '@/shared/types/common';
+import type { ExperienceItem } from '@/shared/types';
 
 export const experience: ExperienceItem[] = [
   {
