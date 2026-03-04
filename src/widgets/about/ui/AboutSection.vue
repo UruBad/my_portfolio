@@ -27,7 +27,7 @@ import { computed } from 'vue';
 
 import { profile } from '@/entities/person/model/profile';
 import Section from '@/shared/ui/Section/Section.vue';
-import { useI18n } from '@/shared.lib/i18n/useI18n';
+import { useI18n } from '@/shared/lib/i18n/useI18n';
 
 const { t, locale } = useI18n();
 

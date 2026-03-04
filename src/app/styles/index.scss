@@ -4,10 +4,22 @@
   box-sizing: border-box;
 }
 
-html,
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 :root {
@@ -26,13 +38,26 @@ body {
   --accent-color: #4f46e5;
   --accent-color-soft: rgba(79, 70, 229, 0.08);
   --border-color-soft: rgba(148, 163, 184, 0.5);
+  --header-bg: rgba(249, 250, 251, 0.9);
+}
+
+:root,
+[data-theme='dark'] {
+  --header-bg: rgba(5, 8, 22, 0.9);
 }
 
 body {
   min-height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   background-color: var(--bg-color);
   color: var(--text-color);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 .app {

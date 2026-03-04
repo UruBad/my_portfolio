@@ -7,30 +7,31 @@
           {{ t('brand.name') }}
         </span>
       </div>
-      <nav class="header__nav" aria-label="Main navigation">
-        <a href="#hero" class="header__link">
-          {{ t('nav.hero') }}
-        </a>
-        <a href="#about" class="header__link">
-          {{ t('nav.about') }}
-        </a>
-        <a href="#experience" class="header__link">
-          {{ t('nav.experience') }}
-        </a>
-        <a href="#skills" class="header__link">
-          {{ t('nav.skills') }}
-        </a>
-        <a href="#projects" class="header__link">
-          {{ t('nav.projects') }}
-        </a>
-        <a href="#education" class="header__link">
-          {{ t('nav.education') }}
-        </a>
-        <a href="#services" class="header__link">
-          {{ t('nav.services') }}
-        </a>
-        <a href="#contacts" class="header__link">
-          {{ t('nav.contacts') }}
+      <button
+        type="button"
+        class="header__burger"
+        aria-label="Open menu"
+        :aria-expanded="navOpen"
+        @click="navOpen = !navOpen"
+      >
+        <span class="header__burger-bar" />
+        <span class="header__burger-bar" />
+        <span class="header__burger-bar" />
+      </button>
+      <nav
+        class="header__nav"
+        :class="{ 'header__nav--open': navOpen }"
+        aria-label="Main navigation"
+      >
+        <a
+          v-for="item in navItems"
+          :key="item.id"
+          :href="`#${item.id}`"
+          class="header__link"
+          :class="{ 'header__link--active': activeSection === item.id }"
+          @click="onNavClick($event, item.id)"
+        >
+          {{ t(item.key) }}
         </a>
       </nav>
       <div class="header__controls">
@@ -42,11 +43,71 @@
 </template>
 
 <script setup lang="ts">
+import { onBeforeUnmount, onMounted, ref } from 'vue';
+
 import LanguageSwitcher from '@/features/language-switcher/ui/LanguageSwitcher.vue';
 import ThemeToggle from '@/features/theme-toggle/ui/ThemeToggle.vue';
 import { useI18n } from '@/shared/lib/i18n/useI18n';
 
 const { t } = useI18n();
+
+const navItems = [
+  { id: 'hero', key: 'nav.hero' },
+  { id: 'about', key: 'nav.about' },
+  { id: 'experience', key: 'nav.experience' },
+  { id: 'skills', key: 'nav.skills' },
+  { id: 'projects', key: 'nav.projects' },
+  { id: 'education', key: 'nav.education' },
+  { id: 'services', key: 'nav.services' },
+  { id: 'contacts', key: 'nav.contacts' },
+];
+
+const activeSection = ref<string>('hero');
+const navOpen = ref(false);
+
+function onNavClick(e: MouseEvent, id: string) {
+  e.preventDefault();
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  navOpen.value = false;
+}
+
+let observer: IntersectionObserver | null = null;
+
+onMounted(() => {
+  const sectionIds = navItems.map((i) => i.id);
+
+  observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        const id = entry.target.id;
+        if (sectionIds.includes(id)) {
+          activeSection.value = id;
+        }
+      }
+    },
+    { rootMargin: '-20% 0px -60% 0px', threshold: 0 },
+  );
+
+  sectionIds.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) observer?.observe(el);
+  });
+
+  const hash = window.location.hash.slice(1);
+  if (hash && sectionIds.includes(hash)) {
+    activeSection.value = hash;
+    const el = document.getElementById(hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
+
+onBeforeUnmount(() => {
+  observer?.disconnect();
+});
 </script>
 
 <style scoped lang="scss">
@@ -55,7 +116,7 @@ const { t } = useI18n();
   top: 0;
   z-index: 10;
   backdrop-filter: blur(16px);
-  background: linear-gradient(90deg, rgba(5, 8, 22, 0.9), rgba(5, 8, 22, 0.7));
+  background: var(--header-bg);
 }
 
 .header__inner {
@@ -113,24 +174,72 @@ const { t } = useI18n();
   transition: opacity 0.15s ease, background-color 0.15s ease;
 }
 
-.header__link:hover {
+.header__link:hover,
+.header__link--active {
   opacity: 1;
-  background-color: rgba(148, 163, 184, 0.16);
+  background-color: var(--accent-color-soft);
+}
+
+.header__link--active {
+  font-weight: 600;
+}
+
+.header__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.header__burger:hover {
+  background-color: var(--accent-color-soft);
+}
+
+.header__burger-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
 }
 
 @media (max-width: 768px) {
   .header__inner {
-    flex-direction: column;
-    align-items: stretch;
+    flex-wrap: wrap;
     gap: 8px;
   }
 
+  .header__burger {
+    display: flex;
+    order: 2;
+    margin-left: auto;
+  }
+
   .header__nav {
-    justify-content: flex-start;
+    order: 3;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: stretch;
+    transition: max-height 0.25s ease;
+  }
+
+  .header__nav--open {
+    max-height: 320px;
   }
 
   .header__controls {
-    justify-content: flex-end;
+    order: 1;
   }
 }
 </style>
