@@ -39,7 +39,7 @@ npm run build
 
 Если репозиторий называется `portfolio`, базовый путь уже настроен. Для корневого сайта (`username.github.io`) измените `base` в `vite.config.ts` на `'/'` и пересоберите.
 
-### Резюме (PDF)
+### Резюме
 Кнопка «Скачать резюме» отдаёт файл `public/binary/resume.pdf`. Исходный PDF лежит в `tasks/resume.pdf` — при обновлении резюме скопируйте его в `public/binary/resume.pdf`:
 ```bash
 cp tasks/resume.pdf public/binary/resume.pdf
