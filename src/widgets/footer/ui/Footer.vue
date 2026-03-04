@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer__inner">
       <span class="footer__text">
-        © {{ year }} Uru Badtiev. All rights reserved.
+        © {{ year }} Uruzmag Badtiev. All rights reserved.
       </span>
     </div>
   </footer>

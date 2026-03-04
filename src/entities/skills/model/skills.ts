@@ -51,8 +51,8 @@ export const skillCategories: SkillCategory[] = [
     },
     skills: [
       { name: 'Sass / SCSS', level: 'core' },
-      { name: 'Адаптивная верстка', level: 'core' },
-      { name: 'Кроссбраузерная верстка', level: 'core' },
+      { name: 'Responsive layout', level: 'core' },
+      { name: 'Cross‑browser layout', level: 'core' },
       { name: 'REST API integration', level: 'core' },
     ],
   },
