@@ -27,7 +27,11 @@ export const messages: Record<Locale, Messages> = {
     'common.language.ru': 'RU',
     'common.language.en': 'EN',
 
-    'placeholder.hero': 'Здесь будет главный экран с кратким представлением и CTA.',
+    'hero.cta.resume': 'Скачать резюме (PDF)',
+    'hero.cta.email': 'Написать',
+    'hero.cta.github': 'GitHub',
+
+    'placeholder.hero': 'Главный экран: краткое представление, CTA и ключевая информация о вас.',
     'placeholder.about': 'Здесь будет раздел «Обо мне» с текстом из резюме.',
     'placeholder.experience': 'Здесь появится таймлайн опыта работы.',
     'placeholder.skills': 'Здесь будет карта навыков и технологий.',
@@ -60,7 +64,11 @@ export const messages: Record<Locale, Messages> = {
     'common.language.ru': 'RU',
     'common.language.en': 'EN',
 
-    'placeholder.hero': 'The hero section with intro and CTAs will appear here.',
+    'hero.cta.resume': 'Download CV (PDF)',
+    'hero.cta.email': 'Email',
+    'hero.cta.github': 'GitHub',
+
+    'placeholder.hero': 'Hero section with intro, CTAs and key information about you.',
     'placeholder.about': 'The “About” section based on your resume will be placed here.',
     'placeholder.experience': 'The experience timeline will appear here.',
     'placeholder.skills': 'Your skills and tech stack will be shown here.',
