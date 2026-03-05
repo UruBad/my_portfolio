@@ -70,5 +70,6 @@ export interface ProjectItem {
   githubUrl?: string;
   liveUrl?: string;
   details?: LocalizedText;
+   imageUrl?: string;
 }
 
