@@ -14,7 +14,7 @@
         </div>
         <div class="contacts__item">
           <dt class="contacts__label">
-            {{ labelEmail }}
+            Email
           </dt>
           <dd class="contacts__value">
             <a :href="`mailto:${contacts.email}`">
@@ -32,7 +32,49 @@
               target="_blank"
               rel="noreferrer"
             >
-              {{ contacts.githubUrl }}
+              github.com/UruBad
+            </a>
+          </dd>
+        </div>
+        <div v-if="contacts.linkedinUrl" class="contacts__item">
+          <dt class="contacts__label">
+            LinkedIn
+          </dt>
+          <dd class="contacts__value">
+            <a
+              :href="contacts.linkedinUrl"
+              target="_blank"
+              rel="noreferrer"
+            >
+              linkedin.com/in/uruzmag-badtiev
+            </a>
+          </dd>
+        </div>
+        <div v-if="contacts.telegramUrl" class="contacts__item">
+          <dt class="contacts__label">
+            Telegram
+          </dt>
+          <dd class="contacts__value">
+            <a
+              :href="contacts.telegramUrl"
+              target="_blank"
+              rel="noreferrer"
+            >
+              @u_badti
+            </a>
+          </dd>
+        </div>
+        <div v-if="contacts.portfolioUrl" class="contacts__item">
+          <dt class="contacts__label">
+            {{ labelSideProject }}
+          </dt>
+          <dd class="contacts__value">
+            <a
+              :href="contacts.portfolioUrl"
+              target="_blank"
+              rel="noreferrer"
+            >
+              relopick.online
             </a>
           </dd>
         </div>
@@ -61,8 +103,8 @@ const { t, locale } = useI18n();
 const contactsLocation = computed(() => contacts.location[locale.value]);
 
 const labelPhone = computed(() => (locale.value === 'ru' ? 'Телефон' : 'Phone'));
-const labelEmail = computed(() => (locale.value === 'ru' ? 'Email' : 'Email'));
 const labelLocation = computed(() => (locale.value === 'ru' ? 'Город' : 'Location'));
+const labelSideProject = computed(() => (locale.value === 'ru' ? 'Сайд‑проект' : 'Side project'));
 </script>
 
 <style scoped lang="scss">
@@ -103,5 +145,3 @@ const labelLocation = computed(() => (locale.value === 'ru' ? 'Город' : 'Lo
   }
 }
 </style>
-
-

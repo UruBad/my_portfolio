@@ -12,7 +12,7 @@ export const skillCategories: SkillCategory[] = [
       { name: 'TypeScript', level: 'core' },
       { name: 'Node.js', level: 'confident' },
       { name: 'HTML5', level: 'core' },
-      { name: 'CSS3', level: 'core' },
+      { name: 'CSS3 / SCSS', level: 'core' },
     ],
   },
   {
@@ -22,12 +22,26 @@ export const skillCategories: SkillCategory[] = [
       en: 'Frameworks & Libraries',
     },
     skills: [
-      { name: 'Vue.js / Vue 3', level: 'core' },
+      { name: 'Vue 3', level: 'core' },
+      { name: 'Nuxt', level: 'core' },
+      { name: 'Pinia', level: 'core' },
+      { name: 'Vue Router', level: 'core' },
       { name: 'Vuex', level: 'confident' },
-      { name: 'Pinia', level: 'confident' },
-      { name: 'Vue Router', level: 'confident' },
-      { name: 'Nuxt.js', level: 'familiar' },
-      { name: 'NestJS', level: 'familiar' },
+      { name: 'NestJS', level: 'confident' },
+    ],
+  },
+  {
+    id: 'architecture',
+    title: {
+      ru: 'Архитектура',
+      en: 'Architecture',
+    },
+    skills: [
+      { name: 'Microfrontends / Module Federation', level: 'core' },
+      { name: 'White-label theming', level: 'core' },
+      { name: 'JWT auth / RBAC', level: 'core' },
+      { name: 'Frontend architecture', level: 'core' },
+      { name: 'Code review & DX', level: 'core' },
     ],
   },
   {
@@ -37,24 +51,13 @@ export const skillCategories: SkillCategory[] = [
       en: 'Tooling & Infrastructure',
     },
     skills: [
+      { name: 'Vite', level: 'core' },
       { name: 'Git', level: 'core' },
+      { name: 'GitHub Actions', level: 'confident' },
+      { name: 'GitLab CI', level: 'confident' },
       { name: 'Docker', level: 'confident' },
-      { name: 'Jira', level: 'confident' },
       { name: 'PostgreSQL', level: 'familiar' },
-    ],
-  },
-  {
-    id: 'ui',
-    title: {
-      ru: 'Верстка и UI',
-      en: 'Layout & UI',
-    },
-    skills: [
-      { name: 'Sass / SCSS', level: 'core' },
-      { name: 'Responsive layout', level: 'core' },
-      { name: 'Cross‑browser layout', level: 'core' },
-      { name: 'REST API integration', level: 'core' },
+      { name: 'Prisma', level: 'familiar' },
     ],
   },
 ];
-

@@ -2,14 +2,14 @@ import type { CourseItem, EducationItem } from '@/shared/types';
 
 export const education: EducationItem[] = [
   {
-    institution: 'Северо‑Кавказский горно‑металлургический институт (ГТУ), Владикавказ',
+    institution: 'СКГМИ (ГТУ) — Северо‑Кавказский горно‑металлургический институт, Владикавказ',
     degree: {
-      ru: 'Высшее образование',
-      en: 'Higher education',
+      ru: 'Специализация',
+      en: 'Specialisation',
     },
     faculty: {
-      ru: 'Факультет информационных технологий, АСОИУ',
-      en: 'Faculty of Information Technologies, Automated Information Processing & Control Systems',
+      ru: 'Автоматизированная обработка информации',
+      en: 'Automated Information Processing',
     },
     year: 2011,
   },
@@ -25,4 +25,3 @@ export const courses: CourseItem[] = [
     year: 2023,
   },
 ];
-

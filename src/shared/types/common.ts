@@ -14,6 +14,9 @@ export interface ContactInfo {
   phone: string;
   email: string;
   githubUrl: string;
+  linkedinUrl?: string;
+  telegramUrl?: string;
+  portfolioUrl?: string;
   location: LocalizedText;
 }
 

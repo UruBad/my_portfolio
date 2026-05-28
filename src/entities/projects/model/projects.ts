@@ -3,6 +3,19 @@ import type { ProjectItem } from '@/shared/types';
 export const projects: ProjectItem[] = [
   {
     title: {
+      ru: 'relopick.online',
+      en: 'relopick.online',
+    },
+    shortDescription: {
+      ru: 'Инструмент для сравнения и ранжирования городов, спроектированный и реализованный с нуля. Vue 3 · NestJS · PostgreSQL · Prisma. Опубликован npm‑пакет: @urubad/earth-globe.',
+      en: 'City-ranking and comparison tool designed and built end-to-end. Vue 3 · NestJS · PostgreSQL · Prisma. Published standalone npm package: @urubad/earth-globe.',
+    },
+    techStack: ['Nuxt 4', 'TypeScript', 'NestJS', 'PostgreSQL', 'Prisma'],
+    liveUrl: 'https://relopick.online',
+    imageUrl: '/my_portfolio/images/relopick.png',
+  },
+  {
+    title: {
       ru: 'White-label витрина 1',
       en: 'White-label storefront 1',
     },
