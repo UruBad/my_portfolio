@@ -26,6 +26,7 @@ export const projects: ProjectItem[] = [
     techStack: ['Vue 3', 'TypeScript', 'Three.js'],
     liveUrl: 'https://www.npmjs.com/package/@urubad/earth-globe',
     githubUrl: 'https://github.com/UruBad/earth-globe',
+    imageUrl: '/my_portfolio/images/earth-globe.png',
   },
   {
     title: {

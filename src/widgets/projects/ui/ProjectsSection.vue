@@ -92,7 +92,7 @@
                   target="_blank"
                   rel="noreferrer"
                   class="lightbox__link"
-                >{{ locale === 'ru' ? 'Открыть сайт' : 'Visit site' }} →</a>
+                >{{ liveUrlLabel(currentProject.liveUrl) }} →</a>
                 <a
                   v-if="currentProject.githubUrl"
                   :href="currentProject.githubUrl"
@@ -168,6 +168,11 @@ function prevSlide() {
   if (lightboxIndex.value === null) return;
   lightboxIndex.value =
     (lightboxIndex.value - 1 + projectsWithImage.value.length) % projectsWithImage.value.length;
+}
+
+function liveUrlLabel(url: string): string {
+  if (url.includes('npmjs.com')) return 'npmjs.com';
+  return locale.value === 'ru' ? 'Открыть сайт' : 'Visit site';
 }
 
 function nextSlide() {
