@@ -4,16 +4,6 @@
       <dl class="contacts__list">
         <div class="contacts__item">
           <dt class="contacts__label">
-            {{ labelPhone }}
-          </dt>
-          <dd class="contacts__value">
-            <a :href="`tel:${contacts.phone}`">
-              {{ contacts.phone }}
-            </a>
-          </dd>
-        </div>
-        <div class="contacts__item">
-          <dt class="contacts__label">
             Email
           </dt>
           <dd class="contacts__value">
@@ -102,7 +92,6 @@ const { t, locale } = useI18n();
 
 const contactsLocation = computed(() => contacts.location[locale.value]);
 
-const labelPhone = computed(() => (locale.value === 'ru' ? 'Телефон' : 'Phone'));
 const labelLocation = computed(() => (locale.value === 'ru' ? 'Город' : 'Location'));
 const labelSideProject = computed(() => (locale.value === 'ru' ? 'Сайд‑проект' : 'Side project'));
 </script>

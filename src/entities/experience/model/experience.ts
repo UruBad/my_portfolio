@@ -50,8 +50,8 @@ export const experience: ExperienceItem[] = [
     start: '2011-09',
     end: '2017-06',
     description: {
-      ru: 'Разработка программного обеспечения на начальном и среднем уровне.',
-      en: 'Software development at junior and middle levels.',
+      ru: 'Разработка веб-приложений и корпоративных систем для клиентов малого и среднего бизнеса.\n\n• Верстал и поддерживал клиентские сайты и внутренние инструменты: от промо-лендингов до CRM-форм и интерфейсов отчётности.\n\n• Освоил полный цикл фронтенд-разработки: HTML/CSS/JavaScript → jQuery → первые проекты на Vue.js. Перешёл от шаблонных сайтов к компонентной архитектуре.\n\n• Самостоятельно изучил JavaScript-экосистему и систематизировал подходы к вёрстке, что стало фундаментом для перехода в крупные продуктовые компании.',
+      en: 'Web and corporate application development for small and medium business clients.\n\n• Built and maintained client websites and internal tools: from promo landing pages to CRM forms and reporting interfaces.\n\n• Mastered the full frontend development cycle: HTML/CSS/JavaScript → jQuery → first Vue.js projects. Progressed from templated sites to component-based architecture.\n\n• Self-studied the JavaScript ecosystem and systematised layout approaches — the foundation that enabled the transition to product-focused companies.',
     },
   },
 ];

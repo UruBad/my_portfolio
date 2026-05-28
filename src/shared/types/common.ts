@@ -11,7 +11,7 @@ export interface PersonProfile {
 }
 
 export interface ContactInfo {
-  phone: string;
+  phone?: string;
   email: string;
   githubUrl: string;
   linkedinUrl?: string;

@@ -3,43 +3,42 @@ import type { ServiceItem } from '@/shared/types';
 export const services: ServiceItem[] = [
   {
     title: {
-      ru: 'Разработка SPA и фронтенда',
-      en: 'SPA & frontend development',
+      ru: 'Vue 3 / Nuxt — разработка и архитектура',
+      en: 'Vue 3 / Nuxt — development & architecture',
     },
     description: {
-      ru: 'Создание современных одностраничных приложений на Vue 3 / React с чистой архитектурой и вниманием к UX.',
-      en: 'Building modern single‑page applications in Vue 3 / React with clean architecture and solid UX.',
+      ru: 'Проектирование и реализация фронтенд-систем на Vue 3 + TypeScript + Pinia. От нуля до production: структура модулей, composable-слой, router guards, SSR через Nuxt.',
+      en: 'Designing and building frontend systems on Vue 3 + TypeScript + Pinia. From scratch to production: module structure, composable layer, router guards, SSR via Nuxt.',
     },
   },
   {
     title: {
-      ru: 'Миграция и рефакторинг фронтенда',
-      en: 'Frontend migration & refactoring',
+      ru: 'Microfrontend-архитектура (Module Federation)',
+      en: 'Microfrontend architecture (Module Federation)',
     },
     description: {
-      ru: 'Перенос легаси‑проектов на современные стеки, устранение технического долга, улучшение читаемости и поддержки кода.',
-      en: 'Migrating legacy frontends to modern stacks, reducing technical debt and improving maintainability.',
+      ru: 'Проектирование microfrontend-архитектуры с Webpack Module Federation: разбивка на независимые бандлы, shared-состояние, стратегии деплоя без координации команд.',
+      en: 'Designing microfrontend architecture with Webpack Module Federation: splitting into independent bundles, shared state, team-independent deploy strategies.',
     },
   },
   {
     title: {
-      ru: 'Оптимизация производительности',
-      en: 'Performance optimisation',
+      ru: 'Миграция Vue 2 → Vue 3 + TypeScript',
+      en: 'Vue 2 → Vue 3 + TypeScript migration',
     },
     description: {
-      ru: 'Анализ узких мест, оптимизация загрузки и рендеринга, улучшение Lighthouse‑показателей.',
-      en: 'Analysing bottlenecks, optimising load and rendering, improving Lighthouse metrics.',
+      ru: 'Пошаговый перевод legacy Vue 2 / Options API кода на Vue 3 Composition API + TypeScript. Включая Vuex → Pinia и планирование границ модулей при переходе на microfrontends.',
+      en: 'Step-by-step migration of legacy Vue 2 / Options API code to Vue 3 Composition API + TypeScript. Including Vuex → Pinia and planning module boundaries during microfrontend adoption.',
     },
   },
   {
     title: {
-      ru: 'Аудит фронтенда и архитектуры',
-      en: 'Frontend & architecture audit',
+      ru: 'White-label тематизация интерфейсов',
+      en: 'White-label UI theming',
     },
     description: {
-      ru: 'Разбор архитектуры, структуры кода и процессов, рекомендации по развитию фронтенда продукта.',
-      en: 'Reviewing frontend architecture and codebase, giving practical recommendations on how to evolve the product.',
+      ru: 'Построение token-based систем тематизации (CSS custom properties + Vite config), позволяющих партнёрам запускать брендированные версии продукта без дублирования кода и с нулевым FOUC.',
+      en: 'Building token-based theming systems (CSS custom properties + Vite config) that let partners ship branded product versions without code duplication and with zero FOUC.',
     },
   },
 ];
-
